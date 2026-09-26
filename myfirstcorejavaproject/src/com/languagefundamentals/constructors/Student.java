@@ -14,6 +14,7 @@ package com.languagefundamentals.constructors;
 //ans : We can add any statements inside the no-arg constructor but we can not add inside the default constructor.!!
 
 //Q) instance block vs constructor difference and which one will execute first ..? 
+// instance block 
 
 public class Student {
 
@@ -28,8 +29,9 @@ public class Student {
 	}
 
 //	Parameterized constructor 
-	Student(int sid, String sname) {
-
+	Student(int sid, String name) {
+		this.sid = sid;//The assignment to variable sid has no effect
+		this.name = name;
 	}
 
 //	{
@@ -55,8 +57,8 @@ public class Student {
 		Student s2 = new Student(9, "Srikanth");
 		s2.studentInfo();
 
-//		Student s3 = new Student();
-//		s3.studentInfo();
+		Student s3 = new Student();
+		s3.studentInfo();
 //
 //		Student s4 = new Student();
 //		s4.studentInfo();
